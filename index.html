@@ -17,11 +17,13 @@
 				height: 100%;
 			}
 			.container {
-				height: calc(100% - 200px);
-				width: 100%;
-				position: fixed;
-				bottom: 20px;
-			}
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+			
 			.title {
 				text-align: center;
 				width: 100%;
@@ -131,7 +133,7 @@
 					reflectivity: 0,
 				});
 
-				sphere = new THREE.Mesh(new THREE.SphereBufferGeometry(200, 20, 10), sphereMat);
+				sphere = new THREE.Mesh(new THREE.SphereBufferGeometry(260, 20, 10), sphereMat);
 				scene.add(sphere);
 
 				controls = new THREE.OrbitControls(camera, container);
