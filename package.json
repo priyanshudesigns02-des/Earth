@@ -1,0 +1,21 @@
+{
+  "name": "ascii-renderer",
+  "version": "0.1.0",
+  "description": "ASCII Animation Test",
+  "main": "ascii-renderer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server .",
+    "build": "uglifyjs ascii-renderer.js -o ascii-renderer.min.js -c -m"
+  },
+  "keywords": [
+    "Three",
+    "ASCII"
+  ],
+  "author": "DeoVolenteGames",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "uglify-es": "^3.3.9"
+  }
+}
