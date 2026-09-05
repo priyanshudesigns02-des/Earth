@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 		<style>
 			:root {
-				--ascii-bg-color: #000;
+				 --ascii-bg-color: transparent;  
 			}
 			html { height: 100%; }
 			body {
@@ -22,7 +22,15 @@
     position: fixed;
     top: 0;
     left: 0;
+	display: flex;              /* add */
+    align-items: center;        /* add */
+    justify-content: center;    /* add */
+    margin: 0;                  /* add */
+    padding: 0;             
 }
+.container * {
+    margin: 0 !important;       /* add — kills default browser margin on whatever element ascii-renderer.js inserts */
+}	
 			
 			.title {
 				text-align: center;
@@ -97,9 +105,10 @@
 				container = document.querySelector('.container');
 
 				var width = container.clientWidth || 2;
-				var height = container.clientWidth || 2;
+				var height = container.clientHeight || 2;
 
 				renderer = new THREE.WebGLRenderer({alpha: true});
+				renderer.setClearColor(0x000000, 0);  
 
 				// This step is important, the renderer must have a parent
 				container.appendChild(renderer.domElement);
